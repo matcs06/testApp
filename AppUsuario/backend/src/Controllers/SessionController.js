@@ -15,7 +15,7 @@ module.exports = {
     let user = await User.findOne({ name });
 
     if (!user) {
-      const user = await User.create({ name });
+      user = await User.create({ name });
     }
 
     req.header = user._id;
